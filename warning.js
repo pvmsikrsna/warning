@@ -14,11 +14,11 @@
  * same logic and follow the same code paths.
  */
 
-var __DEV__ = process.env.NODE_ENV !== 'production';
+var isDev = process.env.NODE_ENV !== 'production';
 
 var warning = function() {};
 
-if (__DEV__) {
+if (isDev) {
   var printWarning = function printWarning(format, args) {
     var len = arguments.length;
     args = new Array(len > 1 ? len - 1 : 0);
